@@ -2,16 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Dataverse Star Wars</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/star-wars');
+    </style>
   </head>
+
   <body>
     <header>
       <h1>STAR WARS</h1>
     </header>
     <main>
-      <h2></h2>
+      <h2>Bienvenido a la Galaxia de .Star Wars</h2>
+      <h4>Explora los detalles de tus personajes favoritos de la Saga</h4>
     </main>
+    <br>
+    
+    <section class="filters">
+      <select name="filterBy" style="width:200px; height: 30px;">
+        <option value= "0">Filtrar por:</option>
+        <option value= "1">Afiliación</option>
+        <option value= "2">Especie</option>
+      </select>
+      <select name="sortBy" style="width:200px; height: 30px;">
+        <option value= "0">ordenar por:</option>
+        <option value= "1">A - Z</option>
+        <option value= "2">Z - A</option>
+        <option value= "3">Edad ascendente</option>
+        <option value= "4">Edad descendente</option>
+        <option value= "5">Estatura ascendente</option>
+        <option value= "6">Estatura descendente</option>
+      </select>
+      <button id="applyFilter" style="width:100px; height: 30px;">Aplicar</button>
+      <button id="clearFilter" style="width:100px; height: 30px;">Borrar</button>
+    </section>
+
     <section>
       <ul >
       
