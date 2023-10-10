@@ -13,5 +13,22 @@ function addElement() {
   }
 }
 addElement();
+const select = document.querySelector('[data-testid="select-filter"]');
+let filterForSpecies = "";
+select.addEventListener("change", function () {
+  let selectOption = this.options[select.selectedIndex];
+  filterForSpecies = selectOption.value;
+  console.log(selectOption.value);
+});
+const button = document.querySelector("button");
+button.addEventListener("click", function () {
+  const fascendente = data.filter(
+    (character) => character.facts.species === filterForSpecies
+  ); const fdescendente = data.filter(
+    (character) => character.facts.species === filterForSpecies
+  );
+
+  console.log(filterSpecies);
+});
 
 console.log(example, renderItems(data), data);
