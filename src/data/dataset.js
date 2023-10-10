@@ -41,7 +41,7 @@ export default [
       species: "Human",
       birthPlanet: "Alderaan",
       weapon: "Bláster",
-      Affiliation: "Rebel Alliance",
+      affiliation: "Rebel Alliance",
       Height: 1.5,
       Age: 19,
     },
@@ -56,7 +56,7 @@ export default [
     facts: {
       species: "Human",
       ship: "Halcón Milenario",
-      Affiliation: "Rebel Alliance",
+      affiliation: "Rebel Alliance",
       Height: 1.8,
       Age: 29,
     },
@@ -67,11 +67,11 @@ export default [
     shortDescription: "Sabio y poderoso Maestro Jedi.",
     description:
       "Yoda era un legendario Maestro Jedi conocido por su sabiduría y su increíble dominio de la Fuerza. A pesar de su pequeño tamaño, Yoda era un guerrero formidable y una figura clave en la formación de generaciones de Jedi. Vivió durante siglos y desempeñó un papel crucial en el destino de la galaxia.",
-    URL: "https://i.pinimg.com/564x/66/4b/01/664b01beadb7b3bb0637ce986cadedb5.jpg",
+    URL: "https://i.pinimg.com/564x/7f/3a/ee/7f3aee2c3ad90e7d3f89bd6604bb499a.jpg",
     facts: {
       species: "Unknown",
       lightsabe: "Verde",
-      Affiliation: "Jedi",
+      affiliation: "Jedi",
       Height: 0.66,
       Age: 900,
     },
@@ -83,7 +83,7 @@ export default [
     shortDescription: "Maestro Jedi y mentor de Anakin Skywalker.",
     description:
       "Obi-Wan Kenobi era un sabio y hábil Maestro Jedi. Entrenó a Anakin Skywalker y más tarde se convirtió en mentor de Luke Skywalker. Obi-Wan desempeñó un papel clave en las Guerras Clon y finalmente se sacrificó para ayudar a la Alianza Rebelde.",
-    URL: "https://i.pinimg.com/564x/b9/4b/71/b94b71ebc517140233e0d1de85bce6df.jpg",
+    URL: "https://i.pinimg.com/564x/d3/bf/40/d3bf40442d4eff5f9d3cf9f05793de95.jpg",
     facts: {
       species: "Human",
       lightsabe: "Azul",
@@ -102,7 +102,7 @@ export default [
     facts: {
       birthPlanet: "Naboo",
       species: "Human",
-      affiliation: "Galactic Republic",
+      affiliation: "Republica galactica",
       Height: 1.65,
       Age: 24,
     },
@@ -117,8 +117,8 @@ export default [
     facts: {
       lightsabe: "Rojo",
       weapon: "Sable de luz de doble hoja",
-      Species: "Zabrak",
-      Affiliation: "Sith",
+      species: "Zabrak",
+      affiliation: "Sith",
       Height: 1.75,
       Age: 37,
     },
@@ -164,23 +164,23 @@ export default [
     facts: {
       species: "Wookiee",
       weapon: "Ballesta laser",
-      Affiliation: "Rebel Alliance",
+      affiliation: "Rebel Alliance",
       Height: 2.28,
       Age: 234,
     },
   },
   {
-    id: "darth-maul",
-    name: "Darth Maul",
-    shortDescription: "Señor Sith con un sable de luz de doble hoja.",
+    id: "jabba-el-hutt",
+    name: "Jabba el Hutt",
+    shortDescription: "Infame gánster hutt y señor del crimen.",
     description:
-      "Darth Maul era un formidable Señor Sith conocido por su sable de luz de doble hoja y sus habilidades de combate increíbles. Fue un adversario mortal de los Jedi y desempeñó un papel clave en los eventos que llevaron a las Guerras Clon. La sed de poder de Maul no conocía límites.",
-    URL: "https://i.pinimg.com/564x/d2/e8/25/d2e825daba7ea9156e0e3ff5bfa06629.jpg",
+      "Jabba el Hutt era un infame gánster hutt y señor del crimen en la galaxia. Controlaba vastos territorios del crimen en Tatooine y era conocido por su crueldad y despiadada búsqueda de poder. Jabba era un aliado de Darth Vader y una figura peligrosa en el inframundo galáctico.",
+    imageUrl: "URL_de_la_imagen_de_Jabba_el_Hutt",
     facts: {
-      species: "Zabrak",
-      affiliation: "Sith",
-      Height: 1.75,
-      Age: 37,
+      specie: "Hutt",
+      affiliation: "Republica galactica",
+      Height: 3.9,
+      Age: 604,
     },
   },
 
@@ -193,8 +193,8 @@ export default [
     URL: "https://i.pinimg.com/564x/8c/57/ca/8c57cadcbff094f3d5d5534c3ace9eb4.jpg",
     facts: {
       lightsabe: "Morado",
-      Species: "Human",
-      Affiliation: "Jedi",
+      species: "Human",
+      affiliation: "Jedi",
       Height: 1.92,
       Age: 53,
     },
@@ -208,8 +208,8 @@ export default [
     URL: "https://i.pinimg.com/564x/26/99/35/26993563e08b720bfcabffb2b6ac83e3.jpg",
     facts: {
       lightsabe: "Rojo",
-      Species: "Human",
-      Affiliation: "Sith",
+      species: "Human",
+      affiliation: "Sith",
       Height: 1.93,
       Age: 83,
     },
@@ -236,7 +236,7 @@ export default [
     shortDescription: "Sith Lord y gobernante del Imperio Galáctico.",
     description:
       "Emperador Palpatine, también conocido como Darth Sidious, era un Sith Lord que se convirtió en el gobernante del Imperio Galáctico. Era un maestro del engaño y la manipulación y tenía un control total sobre la galaxia. Palpatine era el principal antagonista en la caída de la República Galáctica.",
-    URL: "https://i.pinimg.com/564x/d2/e8/25/d2e825daba7ea9156e0e3ff5bfa06629.jpg",
+    URL: "https://i.pinimg.com/564x/81/85/a6/8185a6664b6c27daa41411b16c7d5ad1.jpg",
     facts: {
       species: "Humano",
       affiliation: "Sith",
@@ -369,7 +369,6 @@ export default [
       affiliation: "Alianza rebelde",
       Height: 1.71,
       Age: 112,
-      Name: "C-3PO",
     },
   },
 ];
