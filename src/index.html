@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Dataverse Star Wars</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      @import url('https://fonts.cdnfonts.com/css/star-wars');
-    </style>
-  </head>
 
-  <body>
-    <header>
-      <h1>STAR WARS</h1>
-    </header>
-    <main>
-      <h2>Bienvenido a la Galaxia de .Star Wars</h2>
-      <h4>Explora los detalles de tus personajes favoritos de la Saga</h4>
-    </main>
-    <br>
-    
-    <section class="filters">
-      <select name="filterBy" style="width:200px; height: 30px;">
-        <option value= "0">Filtrar por:</option>
-        <option value= "1">Afiliación</option>
-        <option value= "2">Especie</option>
-      </select>
-      <select name="sortBy" style="width:200px; height: 30px;">
-        <option value= "0">ordenar por:</option>
-        <option value= "1">A - Z</option>
-        <option value= "2">Z - A</option>
-        <option value= "3">Edad ascendente</option>
-        <option value= "4">Edad descendente</option>
-        <option value= "5">Estatura ascendente</option>
-        <option value= "6">Estatura descendente</option>
-      </select>
-      <button id="applyFilter" style="width:100px; height: 30px;">Aplicar</button>
-      <button id="clearFilter" style="width:100px; height: 30px;">Borrar</button>
-    </section>
+<head>
+  <meta charset="utf-8">
+  <title>Dataverse Star Wars</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/star-wars');
+  </style>
+</head>
 
-    <section>
-      <ul >
-      
-      </ul>
-    </section>
-    <footer>
-      <a href="https://github.com/vaneval27">By Vane </a>
-      <a href="https://github.com/1Tai7/DEV012-dataverse">& ilce</a>
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+<body>
+  <header>
+    <h1>STAR WARS</h1>
+  </header>
+  <main>
+    <h2>Bienvenido a la Galaxia de .Star Wars</h2>
+    <h4>Explora los detalles de tus personajes favoritos de la Saga</h4>
+  </main>
+  <section class="filters">
+    <div class="filterSpecies">
+      <label for="filterSpecies">Filtrar por especie: </label>
+      <select name="filterSpecies" data-testid="select-filter">
+        <option value="">-- selecciona --</option>
+        <option value="Desconocido">desconocido</option>
+        <option value="Droide">droide</option>
+        <option value="Humano">humano</option>
+        <option value="Hutt">hutt</option>
+        <option value="Rodian">rodian</option>
+        <option value="Toruga">toruga</option>
+        <option value="Zabrak">zabrak</option>
+      </select>
+    </div>
+    <div class="filterAffiliation">
+      <label for="filteraffiliation">Filtrar por afiliación: </label>
+      <select name="filterAffiliation" data-testid="select-filter">
+        <option value="" , disabled selected>-- selecciona --</option>
+        <option value="Alianza Rebelde">Alianza Rebelde</option>
+        <option value="Cazarrecompensas">Cazarrecompensas</option>
+        <option value="Jedi">Jedi</option>
+        <option value="Primera Orden">Primera Orden</option>
+        <option value="Republica Galactica">Republica Galactica</option>
+        <option value="Resistencia">Resistencia</option>
+        <option value="Sith">Sith</option>
+      </select>
+    </div>
+    <div class="filterOrder">
+      <label for="filterOrder">ordenar por: </label>
+      <select name="sortBy">
+        <option value="">-- selecciona --</option>
+        <option value="1">A - Z</option>
+        <option value="2">Z - A</option>
+        <option value="3">Edad ascendente</option>
+        <option value="4">Edad descendente</option>
+        <option value="5">Estatura ascendente</option>
+        <option value="6">Estatura descendente</option>
+      </select>
+    </div>
+    <div class="buttons">
+      <button id="applyFilter">Aplicar</button>
+      <button id="clearFilter">Borrar</button>
+    </div>
+  </section>
+  <section class="cardsBox">
+    <ul>
+
+    </ul>
+  </section>
+  <footer>
+    <a href="https://github.com/vaneval27">By Vane </a>
+    <a href="https://github.com/1Tai7/DEV012-dataverse">& ilce</a>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

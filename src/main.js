@@ -9,7 +9,14 @@ function addElement() {
   const item = document.createElement("li");
   let algo = "";
   for (let index = 0; index < data.length; index++) {
-    ul.innerHTML += `<li itemscope class= "card"><img src="${data[index].URL}" width= "100px" alt=""> <p>${data[index].name}</p></li> `;
+    ul.innerHTML += `<li itemscope class= "card">
+    <img src="${data[index].URL}"  alt="img"><div class="textCard">
+    <span>${data[index].name}</span>
+    <span>${data[index].shortDescription}</span>
+    <span>Especie: ${data[index].facts.species}</span>
+    <span>Afiliación: ${data[index].facts.affiliation}</span>
+    <span>Estatura: ${data[index].facts.Height} m</span>
+    <span>Edad: ${data[index].facts.Age}</span></div></li> `;
   }
 }
 addElement();
@@ -22,12 +29,9 @@ select.addEventListener("change", function () {
 });
 const button = document.querySelector("button");
 button.addEventListener("click", function () {
-  const fascendente = data.filter(
-    (character) => character.facts.species === filterForSpecies
-  ); const fdescendente = data.filter(
+  const filterSpecies = data.filter(
     (character) => character.facts.species === filterForSpecies
   );
-
   console.log(filterSpecies);
 });
 
