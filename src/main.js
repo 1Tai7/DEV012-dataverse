@@ -15,8 +15,7 @@ applyFilterButton.addEventListener("click", ()=> {
   const sortBy = sortBySelector.value;
   const amountOfCharacteres = computeStats(species, affiliation);
 
-  const sortedData = sortData(dataFiltered, sortBy);
-  //falta renderItems :c
+  //faltan const de las funciones puras filter y renderItems
 
   //cod Ilce :3
   function addElement() {
@@ -50,8 +49,5 @@ applyFilterButton.addEventListener("click", ()=> {
     );
     console.log(filterSpecies);
   });
-  
-  console.log(example, renderItems(data), data);
- 
-});
 
+});
