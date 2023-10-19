@@ -20,6 +20,9 @@
     <h2>Bienvenido a la Galaxia de STAR WARS</h2>
     <h4>Explora los detalles de tus personajes favoritos de la Saga</h4>
   </main>
+
+  <p id="stats"></p>
+
   <section class="filters">
     <div class="filterSpecies">
       <label for="filterSpecies">Filtrar por especie: </label>
@@ -48,27 +51,27 @@
         <option value="Sith">Sith</option>
       </select>
     </div>
-    <div class="filterOrder">
-      <label for="filterOrder">Ordenar por: </label>
-      <select name="sortBy">
-        <option value="" disabled selected>-- selecciona --</option>
-        <option value="1">A - Z</option>
-        <option value="2">Z - A</option>
-        <option value="3">Edad ascendente</option>
-        <option value="4">Edad descendente</option>
-        <option value="5">Estatura ascendente</option>
-        <option value="6">Estatura descendente</option>
+    <div class="sortBy">
+      <label for="sortBy">Ordenar por: </label>
+      <select name="sortBy" data-testid="select-sort">
+        <option value="">-- selecciona --</option>
+        <option value="asc">A - Z</option>
+        <option value="desc">Z - A</option>
+        <option value="ascAge">Edad ascendente</option>
+        <option value="descAge">Edad descendente</option>
+        <option value="ascHeight">Estatura ascendente</option>
+        <option value="descHeight">Estatura descendente</option>
       </select>
     </div>
+
     <div class="buttons">
       <button id="applyFilter">Aplicar</button>
-      <button id="clearFilter">Borrar</button>
+      <button id="clearFilter" data-testid="button-clear">Borrar</button>
     </div>
   </section>
-  <section class="cardsBox">
-    <ul>
 
-    </ul>
+  <section id="root" class="cardsBox">
+   <ul></ul>
   </section>
   <footer>
     <a href="https://github.com/vaneval27">By Vane </a>

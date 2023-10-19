@@ -16,5 +16,4 @@ export const renderCharacter = (data) => {
 export const clearCharacter = () => {
   const ul = document.querySelector("ul");
   ul.innerHTML = "";
-  
 };
