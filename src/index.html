@@ -6,36 +6,39 @@
   <title>Dataverse Star Wars</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    @import url('https://fonts.cdnfonts.com/css/star-wars');
+    @import url('https://fonts.googleapis.com/css2?family=Passero+One&family=Passion+One&display=swap');
   </style>
 </head>
 
 <body>
   <header>
     <h1>STAR WARS</h1>
+    <div class="menu icon"><i class="fa-solid fa-bars icon" style="color: #d7d700 !important;"></i></div>
+
   </header>
   <main>
-    <h2>Bienvenido a la Galaxia de .Star Wars</h2>
+    <h2>Bienvenido a la Galaxia de STAR WARS</h2>
     <h4>Explora los detalles de tus personajes favoritos de la Saga</h4>
   </main>
   <section class="filters">
     <div class="filterSpecies">
       <label for="filterSpecies">Filtrar por especie: </label>
-      <select name="filterSpecies" data-testid="select-filter">
-        <option value="">-- selecciona --</option>
+      <select name="species" data-testid="select-filter">
+        <option value="" disabled selected>-- selecciona --</option>
         <option value="Desconocido">desconocido</option>
         <option value="Droide">droide</option>
         <option value="Humano">humano</option>
         <option value="Hutt">hutt</option>
         <option value="Rodian">rodian</option>
-        <option value="Toruga">toruga</option>
+        <option value="Togruta">togruta</option>
+        <option value="Wookiee">wookiee</option>
         <option value="Zabrak">zabrak</option>
       </select>
     </div>
     <div class="filterAffiliation">
       <label for="filteraffiliation">Filtrar por afiliación: </label>
-      <select name="filterAffiliation" data-testid="select-filter">
-        <option value="" , disabled selected>-- selecciona --</option>
+      <select name="affiliation" data-testid="select-filter">
+        <option value="" disabled selected>-- selecciona --</option>
         <option value="Alianza Rebelde">Alianza Rebelde</option>
         <option value="Cazarrecompensas">Cazarrecompensas</option>
         <option value="Jedi">Jedi</option>
@@ -46,9 +49,9 @@
       </select>
     </div>
     <div class="filterOrder">
-      <label for="filterOrder">ordenar por: </label>
+      <label for="filterOrder">Ordenar por: </label>
       <select name="sortBy">
-        <option value="">-- selecciona --</option>
+        <option value="" disabled selected>-- selecciona --</option>
         <option value="1">A - Z</option>
         <option value="2">Z - A</option>
         <option value="3">Edad ascendente</option>
@@ -69,9 +72,11 @@
   </section>
   <footer>
     <a href="https://github.com/vaneval27">By Vane </a>
-    <a href="https://github.com/1Tai7/DEV012-dataverse">& ilce</a>
+    <a href="https://github.com/1Tai7/DEV012-dataverse" style="padding-left: 3px;"> & Ilce</a>
   </footer>
   <script src="main.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/74b5fc9c6f.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

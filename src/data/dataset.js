@@ -84,7 +84,7 @@ export default [
     shortDescription: "Maestro Jedi y mentor de Anakin Skywalker.",
     description:
       "Obi-Wan Kenobi era un sabio y hábil Maestro Jedi. Entrenó a Anakin Skywalker y más tarde se convirtió en mentor de Luke Skywalker. Obi-Wan desempeñó un papel clave en las Guerras Clon y finalmente se sacrificó para ayudar a la Alianza Rebelde.",
-    URL: "https://i.pinimg.com/564x/45/b0/ff/45b0ff3c18f6ae77659d42ae80a7d6f7.jpg",
+    URL: "https://i.pinimg.com/564x/d3/bf/40/d3bf40442d4eff5f9d3cf9f05793de95.jpg",
     facts: {
       species: "Humano",
       lightsabe: "Azul",
@@ -179,7 +179,7 @@ export default [
       "Jabba el Hutt era un infame gánster hutt y señor del crimen en la galaxia. Controlaba vastos territorios del crimen en Tatooine y era conocido por su crueldad y despiadada búsqueda de poder. Jabba era un aliado de Darth Vader y una figura peligrosa en el inframundo galáctico.",
     URL: "https://i.pinimg.com/564x/a5/46/13/a54613c124ebce435cba73da5724ed3f.jpg",
     facts: {
-      specie: "Hutt",
+      species: "Hutt",
       affiliation: "Republica Galactica",
       Height: 3.9,
       Age: 600,
