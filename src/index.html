@@ -6,7 +6,7 @@
   <title>Dataverse Star Wars</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Passero+One&family=Passion+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;900&family=Passero+One&display=swap');
   </style>
 </head>
 
@@ -23,57 +23,59 @@
 
   <p id="stats"></p>
 
-  <section class="filters">
-    <div class="filterSpecies">
-      <label for="filterSpecies">Filtrar por especie: </label>
-      <select name="species" data-testid="select-filter">
-        <option value="" disabled selected>-- selecciona --</option>
-        <option value="Desconocido">desconocido</option>
-        <option value="Droide">droide</option>
-        <option value="Humano">humano</option>
-        <option value="Hutt">hutt</option>
-        <option value="Rodian">rodian</option>
-        <option value="Togruta">togruta</option>
-        <option value="Wookiee">wookiee</option>
-        <option value="Zabrak">zabrak</option>
-      </select>
-    </div>
-    <div class="filterAffiliation">
-      <label for="filteraffiliation">Filtrar por afiliación: </label>
-      <select name="affiliation" data-testid="select-filter">
-        <option value="" disabled selected>-- selecciona --</option>
-        <option value="Alianza Rebelde">Alianza Rebelde</option>
-        <option value="Cazarrecompensas">Cazarrecompensas</option>
-        <option value="Jedi">Jedi</option>
-        <option value="Primera Orden">Primera Orden</option>
-        <option value="Republica Galactica">Republica Galactica</option>
-        <option value="Resistencia">Resistencia</option>
-        <option value="Sith">Sith</option>
-      </select>
-    </div>
-    <div class="sortBy">
-      <label for="sortBy">Ordenar por: </label>
-      <select name="sortBy" data-testid="select-sort">
-        <option value="">-- selecciona --</option>
-        <option value="asc">A - Z</option>
-        <option value="desc">Z - A</option>
-        <option value="ascAge">Edad ascendente</option>
-        <option value="descAge">Edad descendente</option>
-        <option value="ascHeight">Estatura ascendente</option>
-        <option value="descHeight">Estatura descendente</option>
-      </select>
-    </div>
+  <section class="containerFilter">
+    <section class="containerModal">
+      <div class="filterSpecies">
+        <label for="filterSpecies">Filtrar por especie: </label>
+        <select name="species" data-testid="select-filter">
+          <option value="" disabled selected>-- selecciona --</option>
+          <option value="Desconocido">desconocido</option>
+          <option value="Droide">droide</option>
+          <option value="Humano">humano</option>
+          <option value="Hutt">hutt</option>
+          <option value="Rodian">rodian</option>
+          <option value="Togruta">togruta</option>
+          <option value="Wookiee">wookiee</option>
+          <option value="Zabrak">zabrak</option>
+        </select>
+      </div>
+      <div class="filterAffiliation">
+        <label for="filteraffiliation">Filtrar por afiliación: </label>
+        <select name="affiliation" data-testid="select-filter">
+          <option value="" disabled selected>-- selecciona --</option>
+          <option value="Alianza Rebelde">Alianza Rebelde</option>
+          <option value="Cazarrecompensas">Cazarrecompensas</option>
+          <option value="Jedi">Jedi</option>
+          <option value="Primera Orden">Primera Orden</option>
+          <option value="Republica Galactica">Republica Galactica</option>
+          <option value="Resistencia">Resistencia</option>
+          <option value="Sith">Sith</option>
+        </select>
+      </div>
+      <div class="sortBy">
+        <label for="sortBy">Ordenar por: </label>
+        <select name="sortBy" data-testid="select-sort">
+          <option value="" disabled selected>-- selecciona --</option>
+          <option value="asc">A - Z</option>
+          <option value="desc">Z - A</option>
+          <option value="ascAge">Edad ascendente</option>
+          <option value="descAge">Edad descendente</option>
+          <option value="ascHeight">Estatura ascendente</option>
+          <option value="descHeight">Estatura descendente</option>
+        </select>
+      </div>
 
-    <div class="buttons">
-      <button id="applyFilter">Aplicar</button>
-      <button id="clearFilter" data-testid="button-clear">Borrar</button>
-    </div>
+      <div class="buttons">
+        <button id="applyFilter">Aplicar</button>
+        <button id="clearFilter" data-testid="button-clear">Borrar</button>
+      </div>
+    </section>
   </section>
 
   <section id="root" class="cardsBox">
-   <ul></ul>
+    <ul></ul>
   </section>
-  <footer>
+  <footer><i class="fa-brands fa-github" style="color: #d7d700"></i>
     <a href="https://github.com/vaneval27">By Vane </a>
     <a href="https://github.com/1Tai7/DEV012-dataverse" style="padding-left: 3px;"> & Ilce</a>
   </footer>
