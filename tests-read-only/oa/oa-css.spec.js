@@ -19,7 +19,7 @@ const FLEXBOX_DECLARATION = ['display', 'flex'];
 const FLEXBOX_ATTRIBUTES = ['flex-wrap', 'flex-direction', 'justify-content', 'align-items'];
 
 const renderDOM = (data) => {
-  const items = renderItems(data);
+  const items = renderItems(data); 
   // function renderItems can return html string or an node element
   if (typeof items === 'string') {
     document.querySelector('#root').innerHTML = items;

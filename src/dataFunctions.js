@@ -1,15 +1,23 @@
-/* eslint-disable indent */
-export const filterSpecies = (data, filterForSpecies) => {
+export const filterBySpecies = (data, filterForSpecies) => {
   return data.filter(
     (character) => character.facts.species === filterForSpecies
   );
 };
-export const filterAffiliation = (data, filterForAffiliation) => {
+export const filterByAffiliation = (data, filterForAffiliation) => {
   return data.filter(
     (character) => character.facts.affiliation === filterForAffiliation
   );
 };
+export const clearData = (data) => {
+  const uniqueArr = [];
+  data.forEach((item) => {
+    if (!uniqueArr.includes(item)) {
+      uniqueArr.push(item);
+    }
+  });
 
+  return uniqueArr;
+};
 export function sortData(data, sortBy) {
   const sortedData = [...data];
 

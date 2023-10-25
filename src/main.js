@@ -1,27 +1,41 @@
 import {
-  filterSpecies,
-  filterAffiliation,
-  computeStats,
+  filterBySpecies,
+  filterByAffiliation,
   sortData,
+  clearData,
 } from "./dataFunctions.js";
 import { renderCharacter, clearCharacter } from "./view.js";
 import data from "./data/dataset.js";
 renderCharacter(data);
 
 const selectSpecies = document.querySelector('[name="species"]');
-let filterForSpecies = "";
+let valueSelectSpecies = "";
 selectSpecies.addEventListener("change", function (event) {
-  filterForSpecies = event.target.value;
+  valueSelectSpecies = event.target.value;
 });
 const selectAffiliation = document.querySelector('[name="affiliation"]');
-let filterForAffiliation = "";
+let valueSelectAffiliation = "";
 selectAffiliation.addEventListener("change", function (event) {
-  filterForAffiliation = event.target.value;
+  valueSelectAffiliation = event.target.value;
 });
 const selectSort = document.querySelector('[name="sortBy"]');
 let sortBy = "";
 selectSort.addEventListener("change", function (event) {
   sortBy = event.target.value;
+});
+
+const openModal = document.querySelector(".menu");
+const modal = document.querySelector(".containerFilter");
+openModal.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.style.display = "block";
+
+  modal.classList.add("containerFilter--show");
+});
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
 });
 
 const buttonClear = document.querySelector(
@@ -33,20 +47,30 @@ buttonClear.addEventListener("click", function () {
   selectSpecies.selectedIndex = 0;
   selectAffiliation.selectedIndex = 0;
   selectSort.selectedIndex = 0;
+  valueSelectSpecies = "";
+  valueSelectAffiliation = "";
+  sortBy = "";
 });
-const button = document.querySelector("button");
-button.addEventListener("click", function () {
+const buttonApply = document.querySelector("#applyFilter");
+buttonApply.addEventListener("click", function () {
+  const filteredSpecies = filterBySpecies(data, valueSelectSpecies);
+  const filteredAffiliation = filterByAffiliation(data, valueSelectAffiliation);
+  const clearedData = clearData([...filteredAffiliation, ...filteredSpecies]);
   clearCharacter();
-  const speciesFiltradas = filterSpecies(data, filterForSpecies);
-  renderCharacter(speciesFiltradas);
- // computeStats(speciesFiltradas, filterForSpecies);
+  renderCharacter(clearedData);
 
-  const afiliacionFiltradas = filterAffiliation(data, filterForAffiliation);
-  renderCharacter(afiliacionFiltradas);
-  const sortedData = sortData(data, sortBy);
-  renderCharacter(sortedData);
+  if (sortBy) {
+    let sortedData = [];
+    if (valueSelectAffiliation || valueSelectSpecies) {
+      sortedData = sortData(clearedData, sortBy);
+    } else {
+      sortedData = sortData(data, sortBy);
+    }
+    clearCharacter();
+    renderCharacter(sortedData);
+  }
 });
 
 const amount = computeStats(data, speciesToFilter);
 const stats = document.getElementById("stats");
-stats.innerHTML = "Resultados de tu selección: " + data.length;
+stats.innerHTML = "Resultado de tu selección: " + data.length;
