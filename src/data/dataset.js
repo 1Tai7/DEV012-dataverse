@@ -72,7 +72,7 @@ export default [
     name: "Yoda",
     shortDescription: "Sabio y poderoso Maestro Jedi.",
     description:
-      "Yoda era un legendario Maestro Jedi conocido por su sabiduría y su increíble dominio de la Fuerza. A pesar de su pequeño tamaño, Yoda era un guerrero formidable y una figura clave en la formación de generaciones de Jedi. Vivió durante siglos y desempeñó un papel crucial en el destino de la galaxia.",
+      "Yoda fue un valioso miembro masculino de una especie misteriosa. Era un reverenciado Maestro Jedi que sirvió como Gran Maestro de la Orden Jedi en los últimos días de la República Galáctica. Era famoso dentro de la Orden por su sabiduría, poderes de la Fuerza y combate con sables de luz, y vivió durante casi 900 años. Su tiempo durante los últimos días de la Orden Jedi y más allá lo convirtió en una figura consecuente en la historia galáctica.",
     imageUrl:
       "https://i.pinimg.com/564x/27/4b/97/274b9785ff1bb5f53c30893249081abb.jpg",
     facts: {
@@ -89,7 +89,7 @@ export default [
     name: "Obi-Wan Kenobi",
     shortDescription: "Maestro Jedi y mentor de Anakin Skywalker.",
     description:
-      "Obi-Wan Kenobi era un sabio y hábil Maestro Jedi. Entrenó a Anakin Skywalker y más tarde se convirtió en mentor de Luke Skywalker. Obi-Wan desempeñó un papel clave en las Guerras Clon y finalmente se sacrificó para ayudar a la Alianza Rebelde.",
+      "Obi-Wan Kenobi fue un legendario Maestro Jedi humano que sirvió en el Alto Consejo Jedi durante los últimos añosde la Era de la República. Como General Jedi, Kenobi sirvió en el Gran Ejército de la República durante las Guerras Clon. Kenobi, sin embargo, se vio obligado a exiliarse como resultado de la Gran Purga Jedi. Como mentor, Kenobi fue responsable del entrenamiento de dos miembros de la familia Skywalker, Anakin Skywalker y Luke Skywalker, sirviendo ambos como su Padawan para aprender los caminos de la Fuerza.",
     imageUrl:
       "https://i.pinimg.com/564x/d3/bf/40/d3bf40442d4eff5f9d3cf9f05793de95.jpg",
     facts: {
@@ -105,7 +105,7 @@ export default [
     name: "Padmé Amidala",
     shortDescription: "Reina y senadora de Naboo.",
     description:
-      "Padmé Amidala fue la reina y más tarde senadora de Naboo. Era una diplomática hábil y una fuerte defensora de la paz y la justicia. Padmé desempeñó un papel vital en la política de la República Galáctica y fue una figura clave en los eventos que llevaron a las Guerras Clon.",
+      "Padmé Amidala Naberrie, comúnmente conocida como Padmé Amidala fue una humana política que se convirtió en una de las principales voces para la paz y la diplomacia durante los últimos días de la República Galáctica. Ella saltó a la prominencia galáctica cuando la Federación de Comercio invadió y ocupó su planeta natal de Naboo, pasó a servir como una destacada miembro del Senado Galáctico durante la Guerra de los Clones, y se convirtió en la madre de la legendaria Princesa y General Leia Organa y el Maestro Jedi Luke Skywalker.",
     imageUrl:
       "https://i.pinimg.com/564x/c6/c1/59/c6c15940182e6d3fbc887d74bd06881c.jpg",
     facts: {
@@ -121,7 +121,7 @@ export default [
     name: "Darth Maul",
     shortDescription: "Señor Sith con un sable de luz de doble hoja.",
     description:
-      "Darth Maul era un formidable Señor Sith conocido por su sable de luz de doble hoja y sus habilidades de combate increíbles. Fue un adversario mortal de los Jedi y desempeñó un papel clave en los eventos que llevaron a las Guerras Clon. La sed de poder de Maul no conocía límites.",
+      "Darth Maul Maul fue un zabrak dathomiriano sensible a la Fuerza y un guerrero del lado oscuro que sirvió como el aprendiz Señor Oscuro de los Sith Darth Maul durante los últimos años de la República Galáctica y reinó como señor del crimen durante el dominio del Imperio Galáctico. El hijo de la Madre Talzin de las Hermanas de la Noche, Maul fue tomado a una edad temprana por el Señor Oscuro de los Sith Darth Sidious, quien lo ungió como su primer aprendiz Sith, Darth Maul. Gracias a su entrenamiento.",
     imageUrl:
       "https://i.pinimg.com/564x/13/e3/2f/13e32f62337c69f40540829379095f68.jpg",
     facts: {

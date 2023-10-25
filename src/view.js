@@ -1,7 +1,8 @@
-export const renderCharacter = (data) => {
-  const root = document.getElementById("root");
-  const ul = document.createElement("ul");
-  root.appendChild(ul);
+const root = document.getElementById("root");
+const ul = document.createElement("ul");
+root.appendChild(ul);
+
+export const renderItem = (data) => {
   ul.classList.add("character");
   for (let i = 0; i < data.length; i++) {
     ul.innerHTML += `<li itemscope itemtype= "card" class="cards">

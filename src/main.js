@@ -4,9 +4,9 @@ import {
   sortData,
   clearData,
 } from "./dataFunctions.js";
-import { renderCharacter, clearCharacter } from "./view.js";
+import { renderItem, clearCharacter } from "./view.js";
 import data from "./data/dataset.js";
-renderCharacter(data);
+renderItem(data);
 
 const selectSpecies = document.querySelector('[name="species"]');
 let valueSelectSpecies = "";
@@ -43,7 +43,8 @@ const buttonClear = document.querySelector(
 );
 buttonClear.addEventListener("click", function () {
   clearCharacter();
-  renderCharacter(data);
+  
+  renderItem(data);
   selectSpecies.selectedIndex = 0;
   selectAffiliation.selectedIndex = 0;
   selectSort.selectedIndex = 0;
@@ -57,7 +58,7 @@ buttonApply.addEventListener("click", function () {
   const filteredAffiliation = filterByAffiliation(data, valueSelectAffiliation);
   const clearedData = clearData([...filteredAffiliation, ...filteredSpecies]);
   clearCharacter();
-  renderCharacter(clearedData);
+  renderItem(clearedData);
 
   if (sortBy) {
     let sortedData = [];
@@ -67,7 +68,7 @@ buttonApply.addEventListener("click", function () {
       sortedData = sortData(data, sortBy);
     }
     clearCharacter();
-    renderCharacter(sortedData);
+    renderItem(sortedData);
   }
 });
 const stats = document.getElementById("stats");
