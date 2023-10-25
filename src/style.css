@@ -10,6 +10,11 @@ span,
 h4 {
   font-size: 20px;
 }
+dt,
+button,
+a {
+  font-weight: bold;
+}
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(https://i.pinimg.com/564x/12/dc/29/12dc29241535c318712d951e97e6d283.jpg);
@@ -97,6 +102,7 @@ h4 {
   border-radius: 0 0 10px 0;
   line-height: 1rem;
   width: 13rem;
+  cursor: pointer;
 }
 .containerFilter option:nth-child(1) {
   text-align: center;
@@ -126,10 +132,8 @@ h4 {
   background-color: rgb(23, 75, 244);
   color: white;
 }
-.closeModal {
-  display: none;
-}
-.cardsBox ul {
+
+.cardsBox .character {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -146,7 +150,7 @@ h4 {
 .cards {
   background-color: #ebebeb98;
   border-radius: 50px 0;
-  width: 20rem;
+  width: 24rem;
   height: auto;
   margin-bottom: 2rem;
   display: flex;
@@ -203,7 +207,6 @@ a {
     right: 0;
     left: 0;
     bottom: 0;
-    flex-direction: column;
     margin: 0;
     display: flex;
     opacity: 0;
@@ -219,6 +222,7 @@ a {
     width: 67%;
     padding: 2rem;
     justify-content: flex-start;
+    flex-direction: column;
   }
 
   .containerFilter--show {
@@ -231,6 +235,7 @@ a {
   .sortBy {
     height: 10rem;
     margin: 2rem;
+    width: 100%;
   }
 
   .containerFilter label {

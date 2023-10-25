@@ -1,10 +1,11 @@
 export const renderCharacter = (data) => {
-  const ul = document.querySelector("ul");
+  const root = document.getElementById("root");
+  const ul = document.createElement("ul");
+  root.appendChild(ul);
   ul.classList.add("character");
   for (let i = 0; i < data.length; i++) {
-    ul.innerHTML += 
-  `<li itemscope itemtype= "card" class="cards">
-    <img src="${data[i].URL}" alt="img">
+    ul.innerHTML += `<li itemscope itemtype= "card" class="cards">
+    <img src="${data[i].imageUrl}" alt="img">
     <div class="textCard">
      <span><dt>Nombre: </dt><dd itemprop = "name">${data[i].name}</dd></span>
       <span><dt>Descriptción: </dt><dd itemprop = "shortDescription">${data[i].shortDescription}</dd></span>

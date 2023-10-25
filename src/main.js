@@ -1,7 +1,6 @@
 import {
   filterBySpecies,
   filterByAffiliation,
-  computeStats,
   sortData,
   clearData,
 } from "./dataFunctions.js";
