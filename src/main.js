@@ -71,5 +71,7 @@ buttonApply.addEventListener("click", function () {
     renderItem(sortedData);
   }
 });
+
+const amount = computeStats(data, speciesToFilter);
 const stats = document.getElementById("stats");
 stats.innerHTML = "Resultado de tu selección: " + data.length;
