@@ -3,6 +3,7 @@ import {
   filterByAffiliation,
   sortData,
   clearData,
+  computeStats,
 } from "./dataFunctions.js";
 import { renderItem, clearCharacter } from "./view.js";
 import data from "./data/dataset.js";
@@ -43,7 +44,7 @@ const buttonClear = document.querySelector(
 );
 buttonClear.addEventListener("click", function () {
   clearCharacter();
-  
+
   renderItem(data);
   selectSpecies.selectedIndex = 0;
   selectAffiliation.selectedIndex = 0;
