@@ -47,5 +47,6 @@ button.addEventListener("click", function () {
   renderCharacter(sortedData);
 });
 
+const amount = computeStats(data, speciesToFilter);
 const stats = document.getElementById("stats");
 stats.innerHTML = "Resultados de tu selección: " + data.length;
