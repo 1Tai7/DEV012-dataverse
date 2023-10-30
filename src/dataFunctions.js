@@ -1,11 +1,11 @@
 export const filterBySpecies = (data, filterForSpecies) => {
   return data.filter(
-    (character) => character.facts.species === filterForSpecies
+    (character) => character.facts.speciesCharacter === filterForSpecies
   );
 };
 export const filterByAffiliation = (data, filterForAffiliation) => {
   return data.filter(
-    (character) => character.facts.affiliation === filterForAffiliation
+    (character) => character.facts.affiliationCharacter === filterForAffiliation
   );
 };
 export const clearData = (data) => {
@@ -26,13 +26,13 @@ export function sortData(data, sortBy) {
   } else if (sortBy === "desc") {
     sortedData.sort((a, b) => b.name.localeCompare(a.name));
   } else if (sortBy === "ascAge") {
-    sortedData.sort((a, b) => a.facts.Age - b.facts.Age);
+    sortedData.sort((a, b) => a.facts.ageCharacter - b.facts.ageCharacter);
   } else if (sortBy === "descAge") {
-    sortedData.sort((a, b) => b.facts.Age - a.facts.Age);
+    sortedData.sort((a, b) => b.facts.ageCharacter - a.facts.ageCharacter);
   } else if (sortBy === "ascHeight") {
-    sortedData.sort((a, b) => a.facts.Height - b.facts.Height);
+    sortedData.sort((a, b) => a.facts.heightCharacter - b.facts.heightCharacter);
   } else if (sortBy === "descHeight") {
-    sortedData.sort((a, b) => b.facts.Height - a.facts.Height);
+    sortedData.sort((a, b) => b.facts.heightCharacter - a.facts.heightCharacter);
   } else {
     sortedData.sort((a, b) => a.name.localeCompare(b.name));
   }
@@ -41,22 +41,22 @@ export function sortData(data, sortBy) {
 }
 
 //export const computeStats = (data, value) => {
-  //const dataFiltered = data.reduce((sum, character) => {
-   // if (character.facts.species === value) sum++;
-    //return sum;
-  //}, 0);
+//const dataFiltered = data.reduce((sum, character) => {
+// if (character.facts.species === value) sum++;
+//return sum;
+//}, 0);
 
-  //return dataFiltered;
+//return dataFiltered;
 //};
 export const computeStats = (data, value) => {
   const filteredData = data.map((character) => ({
-    species: character.facts.species,
-    affiliation: character.facts.affiliation,
+    speciesCharacter: character.facts.speciesCharacter,
+    affiliationCharacter: character.facts.affiliationCharacter,
   }));
 
   const amount = filteredData.reduce((sum, character) => {
-    if (character.species === value) {
-      return sum ++;
+    if (character.speciesCharacter === value) {
+      return sum++;
     }
     return sum;
   }, 0);

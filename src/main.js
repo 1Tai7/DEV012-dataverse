@@ -3,18 +3,18 @@ import {
   filterByAffiliation,
   sortData,
   clearData,
-  computeStats,
-} from "./dataFunctions.js";
-import { renderItem, clearCharacter } from "./view.js";
-import data from "./data/dataset.js";
-renderItem(data);
 
-const selectSpecies = document.querySelector('[name="species"]');
+} from "./dataFunctions.js";
+import { renderItems, clearCharacter } from "./view.js";
+import data from "./data/dataset.js";
+renderItems(data);
+
+const selectSpecies = document.querySelector('[name="speciesCharacter"]');
 let valueSelectSpecies = "";
 selectSpecies.addEventListener("change", function (event) {
   valueSelectSpecies = event.target.value;
 });
-const selectAffiliation = document.querySelector('[name="affiliation"]');
+const selectAffiliation = document.querySelector('[name="affiliationCharacter"]');
 let valueSelectAffiliation = "";
 selectAffiliation.addEventListener("change", function (event) {
   valueSelectAffiliation = event.target.value;
@@ -45,7 +45,7 @@ const buttonClear = document.querySelector(
 buttonClear.addEventListener("click", function () {
   clearCharacter();
 
-  renderItem(data);
+  renderItems(data);
   selectSpecies.selectedIndex = 0;
   selectAffiliation.selectedIndex = 0;
   selectSort.selectedIndex = 0;
@@ -59,7 +59,7 @@ buttonApply.addEventListener("click", function () {
   const filteredAffiliation = filterByAffiliation(data, valueSelectAffiliation);
   const clearedData = clearData([...filteredAffiliation, ...filteredSpecies]);
   clearCharacter();
-  renderItem(clearedData);
+  renderItems(clearedData);
 
   if (sortBy) {
     let sortedData = [];
@@ -69,10 +69,10 @@ buttonApply.addEventListener("click", function () {
       sortedData = sortData(data, sortBy);
     }
     clearCharacter();
-    renderItem(sortedData);
+    renderItems(sortedData);
   }
 });
 
-const amount = computeStats(data, speciesToFilter);
+//const amount = computeStats(data, speciesToFilter);
 const stats = document.getElementById("stats");
 stats.innerHTML = "Resultado de tu selección: " + data.length;

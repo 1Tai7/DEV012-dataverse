@@ -1,8 +1,8 @@
-const root = document.getElementById("root");
-const ul = document.createElement("ul");
-root.appendChild(ul);
+export const renderItems = (data) => {
+  const root = document.getElementById("root");
 
-export const renderItem = (data) => {
+  const ul = document.createElement("ul");
+  root.appendChild(ul);
   ul.classList.add("character");
   for (let i = 0; i < data.length; i++) {
     ul.innerHTML += `<li itemscope itemtype= "card" class="cards">
@@ -10,16 +10,17 @@ export const renderItem = (data) => {
     <div class="textCard">
      <span><dt>Nombre: </dt><dd itemprop = "name">${data[i].name}</dd></span>
       <span><dt>Descriptción: </dt><dd itemprop = "shortDescription">${data[i].shortDescription}</dd></span>
-      <span><dt>Especie: </dt><dd itemprop = "specie">${data[i].facts.species}</dd></span>
-      <span><dt>Afiliación: </dt><dd itemprop = "affiliation">${data[i].facts.affiliation}</dd></span>
-      <span><dt>Estatura: </dt><dd itemprop = "height">${data[i].facts.Height} m</dd></span>
-      <span><dt>Edad: </dt><dd itemprop = "age">${data[i].facts.Age}</dd></span>
+      <span><dt>Especie: </dt><dd itemprop = "specie">${data[i].facts.speciesCharacter}</dd></span>
+      <span><dt>Afiliación: </dt><dd itemprop = "affiliation">${data[i].facts.affiliationCharacter}</dd></span>
+      <span><dt>Estatura: </dt><dd itemprop = "height">${data[i].facts.heightCharacter} m</dd></span>
+      <span><dt>Edad: </dt><dd itemprop = "age">${data[i].facts.ageCharacter}</dd></span>
     </div>
   </li> `;
   }
+  return ul;
 };
 
 export const clearCharacter = () => {
-  const ul = document.querySelector("ul");
-  ul.innerHTML = "";
+  const root = document.getElementById("root");
+  root.innerHTML = "";
 };
