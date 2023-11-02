@@ -5,7 +5,7 @@ export const renderItems = (data) => {
   root.appendChild(ul);
   ul.classList.add("character");
   for (let i = 0; i < data.length; i++) {
-    ul.innerHTML += `<li itemscope itemtype= "card" class="cards">
+    ul.innerHTML += `<li itemscope itemtype= "card" class="cards" itemprop="sort-order">
     <img src="${data[i].imageUrl}" alt="img">
     <div class="textCard">
      <span><dt>Nombre: </dt><dd itemprop = "name">${data[i].name}</dd></span>

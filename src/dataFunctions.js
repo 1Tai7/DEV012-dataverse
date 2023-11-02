@@ -30,9 +30,13 @@ export function sortData(data, sortBy) {
   } else if (sortBy === "descAge") {
     sortedData.sort((a, b) => b.facts.ageCharacter - a.facts.ageCharacter);
   } else if (sortBy === "ascHeight") {
-    sortedData.sort((a, b) => a.facts.heightCharacter - b.facts.heightCharacter);
+    sortedData.sort(
+      (a, b) => a.facts.heightCharacter - b.facts.heightCharacter
+    );
   } else if (sortBy === "descHeight") {
-    sortedData.sort((a, b) => b.facts.heightCharacter - a.facts.heightCharacter);
+    sortedData.sort(
+      (a, b) => b.facts.heightCharacter - a.facts.heightCharacter
+    );
   } else {
     sortedData.sort((a, b) => a.name.localeCompare(b.name));
   }
@@ -40,26 +44,20 @@ export function sortData(data, sortBy) {
   return sortedData;
 }
 
-//export const computeStats = (data, value) => {
-//const dataFiltered = data.reduce((sum, character) => {
-// if (character.facts.species === value) sum++;
-//return sum;
-//}, 0);
-
-//return dataFiltered;
-//};
-export const computeStats = (data, value) => {
-  const filteredData = data.map((character) => ({
-    speciesCharacter: character.facts.speciesCharacter,
-    affiliationCharacter: character.facts.affiliationCharacter,
-  }));
-
-  const amount = filteredData.reduce((sum, character) => {
-    if (character.speciesCharacter === value) {
-      return sum++;
+export function computeStats(data) {
+  let stats = 0;
+  data.map(() => stats++);
+  return stats;
+}
+export function ageSumatory(data) {
+  let agesSumatory = 0;
+  data.reduce((accumulator, currentValue) => {
+    if (accumulator) {
+      agesSumatory +=
+        parseInt(accumulator.facts.ageCharacter) +
+        parseInt(currentValue.facts.ageCharacter);
     }
-    return sum;
-  }, 0);
-
-  return Number(amount);
-};
+    agesSumatory += parseInt(currentValue.facts.ageCharacter);
+  });
+  return agesSumatory;
+}

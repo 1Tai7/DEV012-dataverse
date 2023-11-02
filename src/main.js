@@ -3,23 +3,31 @@ import {
   filterByAffiliation,
   sortData,
   clearData,
-
+  computeStats,
+  ageSumatory,
 } from "./dataFunctions.js";
 import { renderItems, clearCharacter } from "./view.js";
 import data from "./data/dataset.js";
 renderItems(data);
+const stats = document.getElementById("stats");
+stats.innerHTML = "Resultado de tu selección: " + computeStats(data);
+
+const sumAges = document.getElementById("sumAges");
+sumAges.innerHTML = "Sumatoria de edades: " + ageSumatory(data);
 
 const selectSpecies = document.querySelector('[name="speciesCharacter"]');
 let valueSelectSpecies = "";
 selectSpecies.addEventListener("change", function (event) {
   valueSelectSpecies = event.target.value;
 });
-const selectAffiliation = document.querySelector('[name="affiliationCharacter"]');
+const selectAffiliation = document.querySelector(
+  '[name="affiliationCharacter"]'
+);
 let valueSelectAffiliation = "";
 selectAffiliation.addEventListener("change", function (event) {
   valueSelectAffiliation = event.target.value;
 });
-const selectSort = document.querySelector('[name="sortBy"]');
+const selectSort = document.querySelector('[name="sort-order"]');
 let sortBy = "";
 selectSort.addEventListener("change", function (event) {
   sortBy = event.target.value;
@@ -52,12 +60,15 @@ buttonClear.addEventListener("click", function () {
   valueSelectSpecies = "";
   valueSelectAffiliation = "";
   sortBy = "";
+  stats.innerHTML = "Resultado de tu selección: " + computeStats(data);
+  sumAges.innerHTML = "Sumatoria de edades: " + ageSumatory(data);
 });
 const buttonApply = document.querySelector("#applyFilter");
 buttonApply.addEventListener("click", function () {
   const filteredSpecies = filterBySpecies(data, valueSelectSpecies);
   const filteredAffiliation = filterByAffiliation(data, valueSelectAffiliation);
   const clearedData = clearData([...filteredAffiliation, ...filteredSpecies]);
+
   clearCharacter();
   renderItems(clearedData);
 
@@ -71,8 +82,10 @@ buttonApply.addEventListener("click", function () {
     clearCharacter();
     renderItems(sortedData);
   }
+
+  stats.innerHTML = "Resultado de tu selección: " + computeStats(clearedData);
+
+  sumAges.innerHTML = "Sumatoria de edades: " + ageSumatory(clearedData);
 });
 
 //const amount = computeStats(data, speciesToFilter);
-const stats = document.getElementById("stats");
-stats.innerHTML = "Resultado de tu selección: " + data.length;

@@ -22,6 +22,7 @@
   </main>
 
   <p id="stats"></p>
+  <p id="sumAges"></p>
 
   <section class="containerFilter">
     <section class="containerModal">
@@ -41,7 +42,7 @@
       </div>
       <div class="filterAffiliation">
         <label for="filteraffiliation">Filtrar por afiliación: </label>
-        <select id="filteraffiliation" name="affiliationCharacter" data-testid="select-filter">
+        <select id="filteraffiliation" name="affiliationCharacter" data-testid="select-filter-affiliation">
           <option value="" disabled selected>-- selecciona --</option>
           <option value="Alianza Rebelde">Alianza Rebelde</option>
           <option value="Cazarrecompensas">Cazarrecompensas</option>
@@ -54,7 +55,7 @@
       </div>
       <div class="sortBy">
         <label for="sortBy">Ordenar por: </label>
-        <select id="sortBy" name="sortBy" data-testid="select-sort">
+        <select id="sortBy" name="sort-order" data-testid="select-sort">
           <option value="" disabled selected>-- selecciona --</option>
           <option value="asc">A - Z</option>
           <option value="desc">Z - A</option>

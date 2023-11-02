@@ -1,18 +1,29 @@
-import { example, anotherExample } from '../src/dataFunctions.js';
-import { data as fakeData } from './data.js';
+import { filterBySpecies } from "../src/dataFunctions.js";
+import { data as fakeData } from "./data.js";
 
-console.log(fakeData);
+describe("filterBySpecies", () => {
+  it("debería filtrar correctamente por una especie", () => {
+    // Especifica la especie por la que deseas filtrar
+    const filterForSpecies = "Humano";
 
-describe('example', () => {
+    // Llama a la función filterBySpecies con los datos de prueba
+    const result = filterBySpecies(fakeData, filterForSpecies);
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+    // Comprueba que el resultado contiene solo personajes con la especie 'Humano'
+    for (const character of result) {
+      expect(character.facts.speciesCharacter).toBe(filterForSpecies);
+    }
+
+    // Comprueba que la longitud del resultado sea la esperada
+    expect(result).toHaveLength(16);
   });
-});
+  /*describe("filterBySpecies", () => {
+  it("should return an empty array if no data is passed", () => {
+    const filterForSpecies = "Humano";
 
-describe('anotherExample', () => {
+    const expectedResult = 16;
+    const actualResult = filterBySpecies(fakeData, filterForSpecies);
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+    expect(actualResult.legth).toEqual(expectedResult);
+  });*/
 });
