@@ -1,11 +1,11 @@
-export const filterBySpecies = (data, filterForSpecies) => {
+export const filterBySpecies = (data, filterBy, filterForSpecies) => {
   return data.filter(
-    (character) => character.facts.speciesCharacter === filterForSpecies
+    (character) => character.facts[filterBy] === filterForSpecies
   );
 };
-export const filterByAffiliation = (data, filterForAffiliation) => {
+export const filterByAffiliation = (data, filterBy, filterForAffiliation) => {
   return data.filter(
-    (character) => character.facts.affiliationCharacter === filterForAffiliation
+    (character) => character.facts[filterBy] === filterForAffiliation
   );
 };
 export const clearData = (data) => {

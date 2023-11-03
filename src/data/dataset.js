@@ -8,7 +8,7 @@ export default [
     imageUrl:
       "https://i.pinimg.com/originals/2b/eb/eb/2bebebe47d9a7e0d4af6bdda170f42d2.jpg",
     facts: {
-      speciesCharacterCharacter: "Humano",
+      speciesCharacter: "Humano",
       birthPlanet: "Tatooine",
       colorLightsaber: "Azul",
       affiliationCharacter: "Alianza Rebelde",
@@ -25,7 +25,7 @@ export default [
     imageUrl:
       "https://64.media.tumblr.com/b36996dd3415c3383c4c28e45b0dfef4/tumblr_nhxpl0MC9s1spcw2co1_500.jpg",
     facts: {
-      speciesCharacterCharacter: "Humano",
+      speciesCharacter: "Humano",
       affiliationCharacter: "Sith",
       birthPlanet: "Tatooine",
       colorLightsaber: "Rojo",

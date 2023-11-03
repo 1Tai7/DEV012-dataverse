@@ -65,8 +65,16 @@ buttonClear.addEventListener("click", function () {
 });
 const buttonApply = document.querySelector("#applyFilter");
 buttonApply.addEventListener("click", function () {
-  const filteredSpecies = filterBySpecies(data, valueSelectSpecies);
-  const filteredAffiliation = filterByAffiliation(data, valueSelectAffiliation);
+  const filteredSpecies = filterBySpecies(
+    data,
+    "speciesCharacter",
+    valueSelectSpecies
+  );
+  const filteredAffiliation = filterByAffiliation(
+    data,
+    "affiliationCharacter",
+    valueSelectAffiliation
+  );
   const clearedData = clearData([...filteredAffiliation, ...filteredSpecies]);
 
   clearCharacter();
@@ -88,4 +96,3 @@ buttonApply.addEventListener("click", function () {
   sumAges.innerHTML = "Sumatoria de edades: " + ageSumatory(clearedData);
 });
 
-//const amount = computeStats(data, speciesToFilter);
