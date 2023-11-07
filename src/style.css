@@ -40,9 +40,6 @@ h1 {
   letter-spacing: 3px;
   font-family: "Passero One", sans-serif !important;
 }
-p {
-  background-color: #ebebeb;
-}
 main {
   margin: 1rem;
   padding: 1rem 0rem 1rem 2rem;
@@ -80,9 +77,26 @@ h2 {
 h4 {
   font-family: "Passero One", sans-serif !important;
 }
+.statistics {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
 
+.statistics p {
+  background-color: #ebebeb;
+  color: #333333;
+  padding: 1rem 4rem;
+  font-family: "Passero One", sans-serif !important;
+  font-size: larger;
+  border-radius: 10px 0px;
+}
+.statistics p:hover {
+  background-color: #3c0808;
+  color: white;
+}
 .containerModal {
-  margin: 1rem;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -122,14 +136,15 @@ h4 {
   border-radius: 5px;
   cursor: pointer;
   background-color: #ebebeb;
+  color: #333333;
 }
 #applyFilter:hover {
-  background-color: rgb(78, 214, 44);
+  background-color: #4ed62c;
   color: white;
 }
 
 #clearFilter:hover {
-  background-color: rgb(23, 75, 244);
+  background-color: #174bf4;
   color: white;
 }
 
@@ -198,7 +213,9 @@ a {
     height: 2rem;
     margin-right: 4rem;
   }
-
+  .statistics {
+    padding: 1rem;
+  }
   .containerFilter {
     background-color: rgba(0, 0, 0, 0.336);
     position: fixed;
@@ -286,5 +303,8 @@ a {
   img {
     width: 8rem;
     height: 8rem;
+  }
+  footer {
+    padding-top: 1rem;
   }
 }
